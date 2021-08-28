@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { timerElapse } from "../../state/actions/Quiz";
 
 const Timer = ({quiz:{totalQuestions}, timerElapse}) => {
-    const [ minutes, setMinutes ] = useState(totalQuestions > 0 ? totalQuestions * 0.5 : 1);
+    const [ minutes, setMinutes ] = useState(totalQuestions > 0 ? totalQuestions * 1 : 1);
     const [seconds, setSeconds ] =  useState(0);
     useEffect(()=>{
     let myInterval = setInterval(() => {

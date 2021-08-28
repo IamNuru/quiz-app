@@ -112,7 +112,7 @@ const QA = ({ quiz: { qa, count, finished, started,loading, currentQuestion, tot
                         Confirm
                       </button>
                     ) : (
-                      <button className="w-full font-semibold md:w-1/2 bg-blue-500" onClick={setFinish}>
+                      <button className="w-full font-semibold py-2 md:w-1/2 bg-blue-500" onClick={setFinish}>
                         Finish
                       </button>
                     )}
