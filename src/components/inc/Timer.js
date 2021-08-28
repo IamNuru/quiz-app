@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { timerElapse } from "../../state/actions/Quiz";
 
 const Timer = ({quiz:{totalQuestions}, timerElapse}) => {
-    const [ minutes, setMinutes ] = useState(totalQuestions > 0 ? totalQuestions * 0.2 : 1);
+    const [ minutes, setMinutes ] = useState(totalQuestions > 0 ? totalQuestions * 0.5 : 1);
     const [seconds, setSeconds ] =  useState(0);
     useEffect(()=>{
     let myInterval = setInterval(() => {
@@ -27,7 +27,7 @@ const Timer = ({quiz:{totalQuestions}, timerElapse}) => {
     });
 
     return (
-        <div className={`font-semibold text-2xl ${seconds < 6 ? 'blink_me': ''}`}>
+        <div className={`font-semibold text-2xl ${seconds < 6 && minutes < 1 ? 'blink_me': ''}`}>
         { minutes === 0 && seconds === 0
             ? null
             : <h1> {minutes}:{seconds < 10 ?  `0${seconds}` : seconds}</h1> 

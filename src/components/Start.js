@@ -35,7 +35,7 @@ const Start = ({ quiz: { categories, loading }, start,setLoading }) => {
           <div className="block text-left my-3">
             <div className="start-label">Category</div>
             <div className="flex flex-wrap">
-              <label className={`hover:bg-blue-400 px-2 w-full my-1 cursor-pointer ${category === "" ? 'hover:bg-blue-700 bg-blue-700 font-semibold text-white':''}`}>
+              <label className={`hover:bg-blue-400 px-2 w-full my-1 py-1 cursor-pointer ${category === "" ? 'hover:bg-blue-700 bg-blue-700 font-semibold text-white':''}`}>
                 <input
                   type="radio"
                   name="category"
@@ -47,7 +47,7 @@ const Start = ({ quiz: { categories, loading }, start,setLoading }) => {
               </label>
               {categories.map((cat) => {
                 return (
-                  <label key={cat.id} className={`hover:bg-blue-400 px-2 w-full my-1 cursor-pointer ${parseInt(category) === cat.id ? 'hover:bg-blue-700 bg-blue-700 font-semibold text-white':''}`}>
+                  <label key={cat.id} className={`hover:bg-blue-400 px-2 w-full my-1 py-1 cursor-pointer ${parseInt(category) === cat.id ? 'hover:bg-blue-700 bg-blue-700 font-semibold text-white':''}`}>
                     <input
                       type="radio"
                       name="category"
@@ -140,7 +140,7 @@ const Start = ({ quiz: { categories, loading }, start,setLoading }) => {
                 </label>
             </div>
           </div>
-          <div className="text-center btn mx-2 py-1 my-2 bg-blue-500 text-white bg-blue-600 hover:bg-blue-800 
+          <div className="text-center btn mx-2 py-2 my-2 bg-blue-500 text-white bg-blue-600 hover:bg-blue-800 
           rounded-lg font-semibold text-xl">
             <button onClick={startNow} className="w-full">Start</button>
           </div>

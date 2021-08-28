@@ -84,11 +84,11 @@ const QA = ({ quiz: { qa, count, finished, started,loading, currentQuestion, tot
                     {currentQuestion[0]?.answers?.length > 0
                       ? currentQuestion[0].answers?.map((a, i) => {
                           return (
-                            <label className={`answer hover:from-pink-500 hover:to-green-400 py-3 md:px-8 z-50 text-sm cursor-pointer ${selectedAnswer === a.answerText ? 'selected-label-color font-semibold':'from-green-300 to-gray-300 bg-gradient-to-r'}`} key={i}>
+                            <label className={`overflow-y-auto answer hover:from-pink-500 hover:to-green-400 py-3 md:px-8 z-50 text-sm cursor-pointer ${selectedAnswer === a.answerText ? 'selected-label-color font-semibold':'from-green-300 to-gray-300 bg-gradient-to-r'}`} key={i}>
                               <span className="uppercase text-md font-semibold">{(i + 10).toString(36) + ":"}&nbsp;</span>
                               <input
                                 type="radio"
-                                className="top-0 left-0 right-0 bottom-0 absolute block"
+                                className="answer-radio absolute block"
                                 name="answer"
                                 value={a.answerText}
                                 checked={selectedAnswer === a.answerText}
